@@ -3,12 +3,13 @@ import csv
 import pandas as pd
 import re
 import numpy as np
+import os
 
 ####input your credentials here
-consumer_key = '2bC3YFasI97knhI8orLF2Hco2'
-consumer_secret = 'Yrh5yqze4LiuetVIC5m6RahpKdNfZTnASQHFW4Eewe8kNV3LAo'
-access_token = '162357846-Nx0AreahmxYHGAEJm9EejOktvHGgSWwHxrmQVSQJ'
-access_token_secret = 'WBzS2DsHAe4v9O00DpW0z8DnBqtz0kpkCw1E22pW9Tf3r'
+consumer_key = os.getenv('consumer_key')
+consumer_secret = os.getenv('consumer_secret')
+access_token = os.getenv('access_token')
+access_token_secret = os.getenv('access_token_secret')
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -76,7 +77,7 @@ def tweet_to_matrix_row(tweet):
     matrix_row = [0] * len(vocabulary)
     for word in tweet_words:
         index = vocabulary.index(word)
-        matrix_row[index] = 1
+        matrix_row[index] += 1
     return matrix_row
 
 sentiment_matrix =  map(tweet_to_matrix_row, tweet_list)
