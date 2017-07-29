@@ -20,6 +20,7 @@ def get_cosine(vec1, vec2):
 
 def text_to_vector(text):
      words = WORD.findall(text)
+    #  import pdb; pdb.set_trace()
      return Counter(words)
 
 text1 = 'How can I be a geologist?'
@@ -29,10 +30,4 @@ vector1 = text_to_vector(text1)
 vector2 = text_to_vector(text2)
 
 cosine = get_cosine(vector1, vector2)
-
-# def cosin_sim(v, w):
-#     return np.dot(v, w) / np.math.sqrt(np.dot(v, v) * np.dot(w, w))
-#
-# print cosin_sim([1,1,1], [1,1,1])
-
 print 'Cosine:', cosine
