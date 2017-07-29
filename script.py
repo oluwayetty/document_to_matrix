@@ -20,7 +20,6 @@ def get_cosine(vec1, vec2):
 
 def text_to_vector(text):
      words = WORD.findall(text)
-    #  import pdb; pdb.set_trace()
      return Counter(words)
 
 text1 = 'How can I be a geologist?'
