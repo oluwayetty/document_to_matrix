@@ -1,4 +1,4 @@
-# twitter_sentiment_analysis
-A playground project for a sentiment analysis based on tweets
+# document_to_matrix
+A playground project to convert a document to a vector space using Tweets from Twitter
 
 Navigate to the project directory and run 'start_script' to run the code.
