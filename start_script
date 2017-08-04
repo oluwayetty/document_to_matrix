@@ -1,6 +1,6 @@
-export access_token_secret=WBzS2DsHAe4v9O00DpW0z8DnBqtz0kpkCw1E22pW9Tf3r
-export consumer_key=2bC3YFasI97knhI8orLF2Hco2
-export consumer_secret=Yrh5yqze4LiuetVIC5m6RahpKdNfZTnASQHFW4Eewe8kNV3LAo
-export access_token=162357846-Nx0AreahmxYHGAEJm9EejOktvHGgSWwHxrmQVSQJ
+export access_token_secret=''
+export consumer_key=''
+export consumer_secret=''
+export access_token=''
 
 python script.py
